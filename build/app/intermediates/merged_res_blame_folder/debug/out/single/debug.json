@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "com.example.apptruyen.app-merged_res-14:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.example.apptruyen.app-main-8:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.apptruyen.app-merged_res-14:/drawable_splash.png.flat",
+        "source": "com.example.apptruyen.app-main-8:/drawable/splash.png"
+    },
+    {
+        "merged": "/Users/nguyenhuy/.gradle/daemon/7.5/com.example.apptruyen.app-merged_res-14:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "/Users/nguyenhuy/.gradle/daemon/7.5/com.example.apptruyen.app-main-8:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/nguyenhuy/.gradle/daemon/7.5/com.example.apptruyen.app-merged_res-14:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/Users/nguyenhuy/.gradle/daemon/7.5/com.example.apptruyen.app-main-8:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/nguyenhuy/.gradle/daemon/7.5/com.example.apptruyen.app-merged_res-14:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/Users/nguyenhuy/.gradle/daemon/7.5/com.example.apptruyen.app-main-8:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/nguyenhuy/.gradle/daemon/7.5/com.example.apptruyen.app-merged_res-14:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/Users/nguyenhuy/.gradle/daemon/7.5/com.example.apptruyen.app-main-8:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.apptruyen.app-merged_res-14:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.example.apptruyen.app-main-8:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.apptruyen.app-merged_res-14:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.example.apptruyen.app-main-8:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.apptruyen.app-merged_res-14:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.example.apptruyen.app-main-8:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/nguyenhuy/.gradle/daemon/7.5/com.example.apptruyen.app-merged_res-14:/drawable-v21_launch_background.xml.flat",
+        "source": "/Users/nguyenhuy/.gradle/daemon/7.5/com.example.apptruyen.app-main-8:/drawable-v21/launch_background.xml"
+    },
+    {
+        "merged": "com.example.apptruyen.app-merged_res-14:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.example.apptruyen.app-main-8:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/nguyenhuy/.gradle/daemon/7.5/com.example.apptruyen.app-merged_res-14:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/Users/nguyenhuy/.gradle/daemon/7.5/com.example.apptruyen.app-main-8:/mipmap-xxhdpi/ic_launcher.png"
+    }
+]
