@@ -82,7 +82,7 @@ class WidgetinfoStory extends StatelessWidget {
           height: 5,
         ),
         Text(
-          'Đăng: ${convertTime(data.uploadDate ?? '')}',
+          'Đăng: ${data.uploadDate != null ? convertTime(data.uploadDate!) : ''}',
           style: appStyle,
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
@@ -91,7 +91,7 @@ class WidgetinfoStory extends StatelessWidget {
           height: 5,
         ),
         Text(
-          'Cập nhật: ${convertTime(data.latestUpdatedDate ?? '')}',
+          'Cập nhật: ${data.latestUpdatedDate != null ? convertTime(data.latestUpdatedDate!) : ''}',
           style: appStyle,
           maxLines: 1,
           overflow: TextOverflow.ellipsis,

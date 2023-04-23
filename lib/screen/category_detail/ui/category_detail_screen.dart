@@ -177,7 +177,7 @@ class _CategoryDetailScreenState extends State<CategoryDetailScreen> {
                     height: 5,
                   ),
                   Text(
-                    'Cập nhật ${convertTime(data.updatedDate ?? '')}',
+                    'Cập nhật ${data.updatedDate != null ? convertTime(data.updatedDate!) : ''}',
                     style: littleStyle,
                     overflow: TextOverflow.ellipsis,
                     maxLines: 1,
