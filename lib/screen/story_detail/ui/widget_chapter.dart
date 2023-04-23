@@ -68,7 +68,8 @@ class WidgetChapter extends StatelessWidget {
                               return GestureDetector(
                                 onTap: () => storyDetailBloc.add(
                                     GetChapterDetailEvent(
-                                        id: snapshot.data![index].id.toString(),
+                                        model: snapshot.data![index],
+                                        lstChapter: chapterController.value,
                                         context: context)),
                                 child: Padding(
                                   padding: const EdgeInsets.only(

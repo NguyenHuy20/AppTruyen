@@ -38,3 +38,20 @@ class ChangeBackgroundSuccessState extends ChapterDetailState {
   @override
   List<Object> get props => [identityHashCode(this), background];
 }
+
+class ScrollNextChapterSuccessState extends ChapterDetailState {
+  final ChapterDetailModel data;
+  const ScrollNextChapterSuccessState({required this.data});
+  @override
+  List<Object> get props => [identityHashCode(this), data];
+}
+
+class ScrollNextChapterFailState extends ChapterDetailState {
+  @override
+  List<Object> get props => [];
+}
+
+class ShowLoadingState extends ChapterDetailState {
+  @override
+  List<Object> get props => [identityHashCode(this)];
+}

@@ -51,3 +51,11 @@ class ChangeBackgroundEvent extends ChapterDetailEvent {
   @override
   List<Object> get props => [];
 }
+
+class ScrollNextChapterEvent extends ChapterDetailEvent {
+  final BuildContext context;
+  final String id;
+  const ScrollNextChapterEvent({required this.context, required this.id});
+  @override
+  List<Object> get props => [];
+}

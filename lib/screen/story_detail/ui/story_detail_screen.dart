@@ -99,7 +99,8 @@ class _StoryDetailScreenState extends State<StoryDetailScreen> {
                   if (chapterController.hasValue &&
                       chapterController.value.isNotEmpty) {
                     storyDetailBloc.add(GetChapterDetailEvent(
-                        id: chapterController.value.first.id.toString(),
+                        model: chapterController.value.first,
+                        lstChapter: chapterController.value,
                         context: context));
                     return;
                   }

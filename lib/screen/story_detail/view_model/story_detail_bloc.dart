@@ -43,14 +43,20 @@ class StoryDetailBloc extends Bloc<StoryDetailEvent, StoryDetailState> {
       GetChapterDetailEvent event, Emitter<StoryDetailState> emit) async {
     try {
       showLoading(event.context, true);
-      var response = await storyRepo.getChapterDetail(event.id);
+      var response =
+          await storyRepo.getChapterDetail(event.model.id.toString());
       showLoading(event.context, false);
-
       if (response.statusCode == 200) {
         final Map<String, dynamic> responseData = json.decode(response.body);
         final ChapterDetailModel chapterDetail =
             ChapterDetailModel.fromJson(responseData);
-        goToScreen(event.context, ChapterDetailScreen(data: chapterDetail),
+        goToScreen(
+            event.context,
+            ChapterDetailScreen(
+              model: event.model,
+              data: chapterDetail,
+              lstChapter: event.lstChapter,
+            ),
             type: ToScreenType.nomal);
         return;
       }

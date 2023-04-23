@@ -49,7 +49,8 @@ class ShowAllChapter extends StatelessWidget {
                             return GestureDetector(
                               onTap: () => storyDetailBloc.add(
                                   GetChapterDetailEvent(
-                                      id: snapshot.data![index].id.toString(),
+                                      model: snapshot.data![index],
+                                      lstChapter: chapterController.value,
                                       context: context)),
                               child: Container(
                                 margin: const EdgeInsets.only(bottom: 10),

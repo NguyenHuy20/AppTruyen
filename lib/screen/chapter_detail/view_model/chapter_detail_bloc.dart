@@ -1,9 +1,15 @@
+import 'dart:convert';
+
+import 'package:apptruyen/share/utils/utils.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_html/style.dart';
 
+import '../../../model/chapter_detail_model.dart';
+import '../../../model/chapter_model.dart';
+import '../../../repo/story_repo.dart';
 import '../ui/widget_dialog_style_text.dart';
 
 part 'chapter_detail_event.dart';
@@ -20,7 +26,10 @@ class ChapterDetailBloc extends Bloc<ChapterDetailEvent, ChapterDetailState> {
     on<ChangeFontFamilyEvent>(_changeFontFamily);
     on<ChangeFontColorEvent>(_changeFontColor);
     on<ChangeBackgroundEvent>(_changeBackground);
+    on<ScrollNextChapterEvent>(_scrollNextChapter);
   }
+  final storyRepo = StoryRepo();
+
   Future<void> _showDilogEditText(
       ShowDialogEditTextEvent event, Emitter<ChapterDetailState> emit) async {
     return showCupertinoDialog(
@@ -35,6 +44,24 @@ class ChapterDetailBloc extends Bloc<ChapterDetailEvent, ChapterDetailState> {
               fontFamily: event.fontFamily,
               bgImage: event.bgImage,
             )));
+  }
+
+  Future<void> _scrollNextChapter(
+      ScrollNextChapterEvent event, Emitter<ChapterDetailState> emit) async {
+    try {
+      emit(ShowLoadingState());
+      var response = await storyRepo.getChapterDetail(event.id);
+      if (response.statusCode == 200) {
+        final Map<String, dynamic> responseData = json.decode(response.body);
+        final ChapterDetailModel chapterDetail =
+            ChapterDetailModel.fromJson(responseData);
+        emit(ScrollNextChapterSuccessState(data: chapterDetail));
+        return;
+      }
+      emit(ScrollNextChapterFailState());
+    } catch (ex) {
+      emit(ScrollNextChapterFailState());
+    }
   }
 
   Future<void> _changeFontSized(

@@ -15,8 +15,10 @@ class GetChapterStoryEvent extends StoryDetailEvent {
 
 class GetChapterDetailEvent extends StoryDetailEvent {
   final BuildContext context;
-  final String id;
-  const GetChapterDetailEvent({required this.id, required this.context});
+  final List<ChapterModel> lstChapter;
+  final ChapterModel model;
+  const GetChapterDetailEvent(
+      {required this.context, required this.lstChapter, required this.model});
   @override
   List<Object> get props => [];
 }
